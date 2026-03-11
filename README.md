@@ -1,33 +1,57 @@
-# Employee Management System (EMS)
+<>Employee Management System (EMS)<>
+====================================
+Overview:
+---------
 
-## Overview
+The Employee Management System (EMS) is a full-stack web application built using Spring Boot and React.
+It allows users to manage employee records through a modern UI while interacting with RESTful backend APIs.
 
-The **Employee Management System (EMS)** is a RESTful backend application built using Spring Boot.
-It allows users to perform CRUD operations on employee records and supports **pagination, sorting, validation, and global exception handling**.
+The backend follows a layered architecture with DTO pattern, while the frontend is built using React with Material UI to provide a responsive and professional dashboard interface.
 
-The project follows a **layered architecture** and uses **DTO pattern with ModelMapper** for clean separation between API and database entities.
+The application supports CRUD operations, pagination, sorting, search functionality, validation, and global exception handling.
 
----
+=====
 
-## Tech Stack
+<>Tech Stack
+------------
 
-* Java
-* Spring Boot
-* Spring Data JPA
-* Hibernate
-* MySQL
-* Maven
-* Lombok
-* ModelMapper
-* JUnit & Mockito
+Backend:
+--------
+Java
+Spring Boot
+Spring Data JPA
+Hibernate
+MySQL
+Maven
+Lombok
+ModelMapper
+JUnit
+Mockito
 
----
+Frontend:
+--------
+React
+Material UI
+Vite
+JavaScript
+Fetch API
 
-## Project Architecture
+Tools:
+------
+Git
+GitHub
+Postman
+IntelliJ IDEA
 
+====
+
+<>Application Architecture
+--------------------------
+
+Backend Architecture:
+---------------------
 Controller → Service → Repository → Database
 
-```
 src/main/java/com/example/ems_project
  ├── Config
  ├── Controller
@@ -36,7 +60,6 @@ src/main/java/com/example/ems_project
  ├── Model
  ├── Repository
  └── Service
-```
 
 ---
 
