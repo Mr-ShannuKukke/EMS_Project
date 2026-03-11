@@ -10,9 +10,8 @@ The backend follows a layered architecture with DTO pattern, while the frontend 
 
 The application supports CRUD operations, pagination, sorting, search functionality, validation, and global exception handling.
 
-=====
 
-<>Tech Stack
+Tech Stack
 ------------
 
 Backend:
@@ -43,10 +42,9 @@ GitHub
 Postman
 IntelliJ IDEA
 
-====
 
-<>Application Architecture
---------------------------
+Application Architecture
+------------------------
 
 Backend Architecture:
 ---------------------
