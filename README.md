@@ -1,55 +1,58 @@
-Employee Management System (EMS)
-====================================
-Overview:
----------
+# Employee Management System (EMS)
 
-The Employee Management System (EMS) is a full-stack web application built using Spring Boot and React.
+## Overview
+
+The **Employee Management System (EMS)** is a **full-stack web application** built using **Spring Boot** and **React**.
+
 It allows users to manage employee records through a modern UI while interacting with RESTful backend APIs.
 
-The backend follows a layered architecture with DTO pattern, while the frontend is built using React with Material UI to provide a responsive and professional dashboard interface.
+The backend follows a **layered architecture with DTO pattern**, while the frontend is built using **React with Material UI** to provide a responsive and professional dashboard interface.
 
-The application supports CRUD operations, pagination, sorting, search functionality, validation, and global exception handling.
+The application supports **CRUD operations, pagination, sorting, search functionality, validation, and global exception handling.**
 
+---
 
-Tech Stack
-------------
+# Tech Stack
 
-Backend:
---------
-Java
-Spring Boot
-Spring Data JPA
-Hibernate
-MySQL
-Maven
-Lombok
-ModelMapper
-JUnit
-Mockito
+## Backend
 
-Frontend:
---------
-React
-Material UI
-Vite
-JavaScript
-Fetch API
+- Java
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Maven
+- Lombok
+- ModelMapper
+- JUnit
+- Mockito
 
-Tools:
-------
-Git
-GitHub
-Postman
-IntelliJ IDEA
+## Frontend
 
+- React
+- Material UI
+- Vite
+- JavaScript
+- Fetch API
 
-Application Architecture
-------------------------
+## Tools
 
-Backend Architecture:
----------------------
+- Git
+- GitHub
+- Postman
+- IntelliJ IDEA
+
+---
+
+# Application Architecture
+
+## Backend Architecture
+
+```
 Controller → Service → Repository → Database
+```
 
+```
 src/main/java/com/example/ems_project
  ├── Config
  ├── Controller
@@ -58,10 +61,11 @@ src/main/java/com/example/ems_project
  ├── Model
  ├── Repository
  └── Service
+```
 
-Frontend Architecture:
-----------------------
+## Frontend Architecture
 
+```
 ems-frontend
  ├── src
  │   ├── App.jsx
@@ -69,40 +73,41 @@ ems-frontend
  │   └── components
  ├── package.json
  └── vite.config.js
+```
 
 ---
 
-Features
---------
+# Features
 
-Backend Features:
-----------------
-Create Employee
-Get All Employees
-Get Employee by ID
-Update Employee
-Delete Employee
-Pagination
-Sorting
-DTO Pattern
-ModelMapper Mapping
-Global Exception Handling
-Input Validation
-Unit Testing
+## Backend Features
 
-Frontend Features:
-------------------
-Add Employee UI
-Edit Employee UI
-Delete Employee with Confirmation Dialog
-Search Employee (Live Search)
-Pagination UI
-Success Toast Notifications
-Responsive Dashboard Layout
-Modern UI using Material UI
+- Create Employee
+- Get All Employees
+- Get Employee by ID
+- Update Employee
+- Delete Employee
+- Pagination
+- Sorting
+- DTO Pattern
+- ModelMapper Mapping
+- Global Exception Handling
+- Input Validation
+- Unit Testing
+
+## Frontend Features
+
+- Add Employee UI
+- Edit Employee UI
+- Delete Employee with Confirmation Dialog
+- Search Employee (Live Search)
+- Pagination UI
+- Success Toast Notifications
+- Responsive Dashboard Layout
+- Modern UI using Material UI
+
 ---
 
-## API Base URL
+# API Base URL
 
 ```
 http://localhost:8081/api/employees
@@ -110,26 +115,20 @@ http://localhost:8081/api/employees
 
 ---
 
-## API Endpoints
+# API Endpoints
 
-| Method | Endpoint             | Description                               |
-| ------ | -------------------- | ----------------------------------------- |
-| POST   | /api/employees       | Create employee                           |
-| GET    | /api/employees       | Get all employees                         |
-| GET    | /api/employees/{id}  | Get employee by ID                        |
-| PUT    | /api/employees/{id}  | Update employee                           |
-| DELETE | /api/employees/{id}  | Delete employee                           |
-| GET    | /api/employees/paged | Get employees with pagination and sorting |
+| Method | Endpoint | Description |
+|------|------|------|
+| POST | /api/employees | Create employee |
+| GET | /api/employees | Get all employees |
+| GET | /api/employees/{id} | Get employee by ID |
+| PUT | /api/employees/{id} | Update employee |
+| DELETE | /api/employees/{id} | Delete employee |
+| GET | /api/employees/paged | Pagination and sorting |
 
 ---
 
-## Pagination & Sorting
-
-Pagination endpoint:
-
-```
-GET /api/employees/paged
-```
+# Pagination & Sorting
 
 Example request:
 
@@ -139,30 +138,30 @@ GET /api/employees/paged?pageNo=0&pageSize=5&sortBy=id
 
 ### Parameters
 
-| Parameter | Description                              |
-| --------- | ---------------------------------------- |
-| pageNo    | Page number (default = 0)                |
-| pageSize  | Number of records per page (default = 5) |
-| sortBy    | Field to sort by (default = id)          |
+| Parameter | Description |
+|------|------|
+| pageNo | Page number |
+| pageSize | Records per page |
+| sortBy | Sorting field |
 
 ---
 
-## Validation
+# Validation
 
 Employee fields are validated using **Jakarta Validation**.
 
-Example rules:
+Rules include:
 
-* First Name → Cannot be blank
-* Last Name → Cannot be blank
-* Email → Must be valid format
-* Department → Cannot be blank
+- First Name → Cannot be blank
+- Last Name → Cannot be blank
+- Email → Must be valid format
+- Department → Cannot be blank
 
 ---
 
-## Global Exception Handling
+# Global Exception Handling
 
-The project implements centralized exception handling using:
+Centralized error handling implemented using:
 
 ```
 @RestControllerAdvice
@@ -170,8 +169,8 @@ The project implements centralized exception handling using:
 
 Handled exceptions:
 
-* EmployeeNotFoundException
-* Validation errors (MethodArgumentNotValidException)
+- EmployeeNotFoundException
+- MethodArgumentNotValidException
 
 Example error response:
 
@@ -187,21 +186,21 @@ Example error response:
 
 ---
 
-## Database Configuration
+# Database Configuration
 
-Database Name:
+### Database
 
 ```
 ems_dto
 ```
 
-Table Name:
+### Table
 
 ```
 employees_dto
 ```
 
-`application.properties` configuration:
+Example `application.properties` configuration:
 
 ```
 spring.datasource.url=jdbc:mysql://localhost:3306/ems_dto?useSSL=false&allowPublicKeyRetrieval=true
@@ -215,21 +214,23 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 
 ---
 
-## Running the Application
+# Running the Application
 
-Clone the repository:
+## Clone the Repository
 
 ```
 git clone https://github.com/Mr-ShannuKukke/EMS_Project.git
 ```
 
-Navigate to the project directory and run:
+---
+
+# Run Backend
 
 ```
 mvn spring-boot:run
 ```
 
-Server will start at:
+Server runs at:
 
 ```
 http://localhost:8081
@@ -237,9 +238,37 @@ http://localhost:8081
 
 ---
 
-## Example API Test
+# Run Frontend
 
-Create Employee:
+Navigate to frontend folder:
+
+```
+cd ems-frontend
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Start React application:
+
+```
+npm run dev
+```
+
+Frontend runs at:
+
+```
+http://localhost:5173
+```
+
+---
+
+# Example API Request
+
+### Create Employee
 
 ```
 POST /api/employees
@@ -258,6 +287,9 @@ Request body:
 
 ---
 
-## Author
+# Author
 
-Shannu Kukke
+**Shannu Kukke**
+
+GitHub:  
+https://github.com/Mr-ShannuKukke/EMS_Project
