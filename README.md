@@ -59,23 +59,47 @@ src/main/java/com/example/ems_project
  ├── Repository
  └── Service
 
+Frontend Architecture:
+----------------------
+
+ems-frontend
+ ├── src
+ │   ├── App.jsx
+ │   ├── main.jsx
+ │   └── components
+ ├── package.json
+ └── vite.config.js
+
 ---
 
-## Features
+Features
+--------
 
-* Create Employee
-* Get All Employees
-* Get Employee by ID
-* Update Employee
-* Delete Employee
-* Pagination
-* Sorting
-* Global Exception Handling
-* DTO Pattern
-* ModelMapper Mapping
-* Input Validation
-* Unit Testing
+Backend Features:
+----------------
+Create Employee
+Get All Employees
+Get Employee by ID
+Update Employee
+Delete Employee
+Pagination
+Sorting
+DTO Pattern
+ModelMapper Mapping
+Global Exception Handling
+Input Validation
+Unit Testing
 
+Frontend Features:
+------------------
+Add Employee UI
+Edit Employee UI
+Delete Employee with Confirmation Dialog
+Search Employee (Live Search)
+Pagination UI
+Success Toast Notifications
+Responsive Dashboard Layout
+Modern UI using Material UI
 ---
 
 ## API Base URL
